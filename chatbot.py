@@ -153,18 +153,18 @@ def main():
             response = response['answer']
             
             end_time = time.time()
-            print(end_time - start_time)
+            # print(end_time - start_time)
             st.chat_message("ai").markdown(response)
             
-            with st.expander("see relevant documents"):
-                for doc in revalatent_docs:
-                    st.write(doc)
-                    st.markdown("""
+            # with st.expander("see relevant documents"):
+            #     for doc in revalatent_docs:
+            #         st.write(doc)
+            #         st.markdown("""
                                 
-                                """)
+            #                     """)
                     
-            with st.expander("see chat history"):
-                st.write(chat_history_info)
+            # with st.expander("see chat history"):
+            #     st.write(chat_history_info)
                           
         st.session_state.messages_document.append({"role": "assistant", "content": response})
         
